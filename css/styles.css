@@ -657,6 +657,7 @@ body:not(:has(#accueil)) {
   display: flex;
   flex-direction: column;
   margin: 15px 100px;
+  color: whitesmoke;
 }
 
 /*==========================================
