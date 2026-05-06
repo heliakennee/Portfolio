@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veille technologique</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <div class="home">
+        <a href="index.html">
+            <svg viewBox="-4.5 0 32 32" class="home-icon" xmlns="http://www.w3.org/2000/svg"><path d="M19.469 12.594l3.625 3.313c0.438 0.406 0.313 0.719-0.281 0.719h-2.719v8.656c0 0.594-0.5 1.125-1.094 1.125h-4.719v-6.063c0-0.594-0.531-1.125-1.125-1.125h-2.969c-0.594 0-1.125 0.531-1.125 1.125v6.063h-4.719c-0.594 0-1.125-0.531-1.125-1.125v-8.656h-2.688c-0.594 0-0.719-0.313-0.281-0.719l10.594-9.625c0.438-0.406 1.188-0.406 1.656 0l2.406 2.156v-1.719c0-0.594 0.531-1.125 1.125-1.125h2.344c0.594 0 1.094 0.531 1.094 1.125v5.875z"></path>
+        </svg>
+        </a>
+    </div>
+    <h1 id="section-title">Veille technologique</h1>
+    <div class="text">
+        <br>
+        <h2>L'intelligence artificielle dans la cyber-sécurité</h2>
+        <p>
+            L’intelligence artificielle transforme profondément la cybersécurité, à la fois comme outil de défense et comme vecteur d’attaque. Elle est à la fois un levier pour anticiper et corriger les vulnérabilités plus rapidement, et un moyen pour les attaquants d’industrialiser, automatiser et rendre plus difficiles à détecter leurs campagnes. Deux grands axes sont à distinguer :  l’usage offensif de l’IA et l’usage défensif de l’IA, chacun comportant plusieurs dimensions techniques, organisationnelles et réglementaires.
+        <p>
+            L’une des illustrations les plus marquantes de l’IA côté attaquant est le ransomware PromptLock, présenté comme le premier ransomware entièrement piloté par une IA générative. Il utilise un modèle LLM (gpt‑oss‑20b) hébergé localement avec Ollama pour générer dynamiquement des scripts Lua malveillants qui explorent le système de fichiers, exfiltrent les données et chiffrent les fichiers avec l’algorithme SPECK 128‑bits. Ce ransomware est capable de cibler à la fois Windows, Linux et macOS, ce qui montre une grande capacité d’adaptation et une volonté de maximiser la surface d’attaque.
+Ce type d’attaque démontre que l’IA permet non seulement de rendre le chiffrement plus ciblé, mais aussi de créer des scripts adaptés à l’environnement de la victime, ce qui complique la détection par des signatures classiques.
+        </p>   
+            Un autre exemple emblématique est le malware PROMPTFLUX, un script VBScript qui interroge régulièrement l’IA Gemini de Google pour réécrire son propre code toutes les heures. Les attaquants présentent ce script comme un “expert en obfuscation” qui améliore la furtivité des scripts, ce qui produit en continu de nouvelles variantes du malware. Ce mécanisme permet de contourner les systèmes de détection basés sur des signatures statiques, et de se jouer des outils EDR lorsque ceux‑ci ne sont pas suffisamment centrés sur le comportement dynamique du code.
+Ce phénomène illustre comment l’IA permet aux attaquants de transformer un seul malware en famille évolutive capable de s’adapter à chaque environnement, ce qui déplace la difficulté de la détection des signatures vers l’analyse comportementale et contextuelle.
+        <p>      
+            L’IA est aussi utilisée de manière indirecte pour conduire des attaques d’ingénierie sociale. Des campagnes récentes ont montré que des pirates peuvent profiter de faux artefacts liés à Claude (Anthropic) pour attirer des utilisateurs macOS vers des pages d’assistance qui semblent légitimes sur le domaine claude.ai. Ils utilisent des annonces Google Ads bien positionnées pour orienter les internautes vers ces artefacts, puis les incitent à exécuter un script dans le Terminal qui installe un infostealer nommé MacSync. Des analyses estiment que plusieurs dizaines de milliers d’utilisateurs ont été exposés à ces pages malveillantes.
+Ces cas montrent que l’attaquant n’a pas besoin de rendre le modèle d’IA malveillant lui‑même : il suffit de l’utiliser comme support de crédibilité pour convaincre une victime de réaliser une action dangereuse, ce qui renforce le rôle de l’humain comme maillon faible et rend la sensibilisation encore plus critique.
+        </p>
+Côté défense, l’un des usages les plus puissants de l’IA est l’analyse de code et la découverte de vulnérabilités à grande échelle. Un exemple marquant est Claude Mythos, un modèle d’Anthropic utilisé par Mozilla pour scanner le code source de Firefox 150. En quelques heures, il a permis de repérer 271 vulnérabilités de sécurité, toutes corrigées dans la version publiée. Avant cela, une analyse avec Claude Opus 4.6 n’avait permis de trouver que 22 vulnérabilités sur Firefox 148, ce qui illustre l’ampleur de l’accélération apportée par l’IA.
+Ce type d’outil montre qu’un modèle d’IA peut analyser des millions de lignes de code, repérer des schémas de vulnérabilités, et proposer des corrections ou des pistes de sécurisation beaucoup plus rapidement qu’une équipe humaine seule, ce qui réduit sensiblement les fenêtres d’exposition des logiciels.
+        </p>
+        <p>
+            L’efficacité de l’IA en défense n’est possible que si son usage est encadré. Anthropic elle‑même a choisi de ne pas publier Claude Mythos au grand public, en le réservant à un petit groupe de partenaires, car ses capacités de détection de vulnérabilités sont jugées trop puissantes pour être laissées libres. Cette décision illustre la conscience de l’éditeur sur le caractère double‑tranchant de ces modèles : ils peuvent servir à renforcer la sécurité, mais aussi servir de base à des outils d’exploitation offensifs si leurs capacités sont mal maîtrisées.
+Les autorités de cybersécurité, comme l’ANSSI en France, recommandent une approche par les risques : évaluer les enjeux de sécurité, de confidentialité et de confiance liés à l’IA, puis mettre en place des contrôles d’accès, une supervision des données d’entraînement, et une traçabilité des décisions automatisées. Cela passe aussi par une réflexion sur la gouvernance des systèmes d’IA et leur intégration dans les architectures de sécurité existantes.
+        </p>
+        <p>
+            L’usage de l’IA dans les systèmes d’information implique inévitablement un traitement de données, souvent sensibles, ce qui pose des questions de conformité au RGPD et de protection de la vie privée. Les entreprises doivent s’assurer que les données envoyées aux modèles d’IA ne contiennent pas d’informations personnelles non protégées, que les traitements sont documentés, et que les mesures de sécurité sont à la hauteur des risques. La gouvernance RGPD et la cybersécurité doivent donc être pensées conjointement, en intégrant la collecte, le stockage, la protection et l’effacement des données traitées par l’IA.
+En pratique, cela signifie que l’IA ne peut pas être déployée comme une black box : elle doit être intégrée dans un cadre de conformité où l’on contrôle les inputs, les outputs, et les droits d’accès, sous peine de vulnérabilités techniques et de risques juridiques majeurs. Les organisations doivent donc réfléchir aussi bien à la robustesse de leurs défenses qu’à la transparence et à la responsabilité de l’usage de l’IA dans leurs SI.
+        </p>
+        <p>
+            L’intelligence artificielle apparaît aujourd’hui comme un double tranchant au cœur de la cybersécurité, à la fois comme outil de défense et comme vecteur d’accélération des attaques. D’un côté, des outils comme Claude Mythos ou l’usage de l’IA pour analyser du code montrent qu’il est possible d’identifier et de corriger des vulnérabilités à une échelle et une vitesse inaccessible auparavant, transformant la sécurisation des logiciels et la gestion des risques. De l’autre, des ransomwares comme PromptLock ou des malwares auto‑mutants comme PROMPTFLUX démontrent que l’IA permet aux attaquants de rendre leurs campagnes plus furtives, plus ciblées et plus difficiles à enrayer. Enfin, l’encadrement gouvernemental, les recommandations de l’ANSSI et les exigences du RGPD rappellent que l’IA en cybersécurité ne peut pas être déployée sans une véritable gouvernance, où protection des données. Ainsi la maîtrise des risques et supervision des systèmes d’IA sont placés au centre de la stratégie de sécurité.
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accueil</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="bg-layer bg-a" id="bga"></div>
+  <div class="bg-layer bg-b" id="bgb"></div>
+
+  <div id="accueil">
+    <div id="accueil-card">
+      <h1>Loris Foucault</h1>
+
+      <div class="carousel-container">
+        <button class="carousel-btn carousel-btn-prev" aria-label="Previous slide">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15,18 9,12 15,6"></polyline>
+          </svg>
+        </button>
+
+        <div class="carousel-wrapper">
+          <ul class="slider" id="slider">
+
+            <li class="slide active"
+                data-bg="linear-gradient(145deg, #0d1a28 0%, #14263d 55%, #1a3050 100%)">
+              <a href="profil.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="slide-pict">
+                  <path d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z"/>
+                </svg>
+                <span>Profil</span>
+              </a>
+            </li>
+
+            <li class="slide"
+                data-bg="linear-gradient(145deg, #0c1923 0%, #131f30 50%, #1c2e42 100%)">
+              <a href="projet.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="slide-pict">
+                  <path d="M197.8 100.3C208.7 107.9 211.3 122.9 203.7 133.7L147.7 213.7C143.6 219.5 137.2 223.2 130.1 223.8C123 224.4 116 222 111 217L71 177C61.7 167.6 61.7 152.4 71 143C80.3 133.6 95.6 133.7 105 143L124.8 162.8L164.4 106.2C172 95.3 187 92.7 197.8 100.3zM197.8 260.3C208.7 267.9 211.3 282.9 203.7 293.7L147.7 373.7C143.6 379.5 137.2 383.2 130.1 383.8C123 384.4 116 382 111 377L71 337C61.6 327.6 61.6 312.4 71 303.1C80.4 293.8 95.6 293.7 104.9 303.1L124.7 322.9L164.3 266.3C171.9 255.4 186.9 252.8 197.7 260.4zM288 160C288 142.3 302.3 128 320 128L544 128C561.7 128 576 142.3 576 160C576 177.7 561.7 192 544 192L320 192C302.3 192 288 177.7 288 160zM288 320C288 302.3 302.3 288 320 288L544 288C561.7 288 576 302.3 576 320C576 337.7 561.7 352 544 352L320 352C302.3 352 288 337.7 288 320zM224 480C224 462.3 238.3 448 256 448L544 448C561.7 448 576 462.3 576 480C576 497.7 561.7 512 544 512L256 512C238.3 512 224 497.7 224 480zM128 440C150.1 440 168 457.9 168 480C168 502.1 150.1 520 128 520C105.9 520 88 502.1 88 480C88 457.9 105.9 440 128 440z"/>
+                </svg>
+                <span>Projets</span>
+              </a>
+            </li>
+
+            <li class="slide"
+                data-bg="linear-gradient(145deg, #0b1820 0%, #121c2a 50%, #192a3c 100%)">
+              <a href="doc.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="slide-pict">
+                  <path d="M480 576L192 576C139 576 96 533 96 480L96 160C96 107 139 64 192 64L496 64C522.5 64 544 85.5 544 112L544 400C544 420.9 530.6 438.7 512 445.3L512 512C529.7 512 544 526.3 544 544C544 561.7 529.7 576 512 576L480 576zM192 448C174.3 448 160 462.3 160 480C160 497.7 174.3 512 192 512L448 512L448 448L192 448zM224 216C224 229.3 234.7 240 248 240L424 240C437.3 240 448 229.3 448 216C448 202.7 437.3 192 424 192L248 192C234.7 192 224 202.7 224 216zM248 288C234.7 288 224 298.7 224 312C224 325.3 234.7 336 248 336L424 336C437.3 336 448 325.3 448 312C448 298.7 437.3 288 424 288L248 288z"/>
+                </svg>
+                <span>Documentation</span>
+              </a>
+            </li>
+
+            <li class="slide"
+                data-bg="linear-gradient(145deg, #0d1a24 0%, #152030 50%, #1a2c3e 100%)">
+              <a href="veille.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="slide-pict">
+                  <path d="M320 64C177.3 64 64 177.3 64 320C64 462.7 177.3 576 320 576C462.7 576 576 462.7 576 320C576 177.3 462.7 64 320 64zM320 192C337.7 192 352 206.3 352 224C352 241.7 337.7 256 320 256C302.3 256 288 241.7 288 224C288 206.3 302.3 192 320 192zM288 288L352 288C369.7 288 384 302.3 384 320L384 416C401.7 416 416 430.3 416 448C416 465.7 401.7 480 384 480L256 480C238.3 480 224 465.7 224 448C224 430.3 238.3 416 256 416L256 352C238.3 352 224 337.7 224 320C224 302.3 238.3 288 256 288L288 288z"/>
+                </svg>
+                <span>Veille</span>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+        <button class="carousel-btn carousel-btn-next" aria-label="Next slide">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9,18 15,12 9,6"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <div class="carousel-indicators">
+        <button class="indicator active" data-slide="0"></button>
+        <button class="indicator" data-slide="1"></button>
+        <button class="indicator" data-slide="2"></button>
+        <button class="indicator" data-slide="3"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
